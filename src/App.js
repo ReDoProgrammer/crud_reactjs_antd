@@ -1,5 +1,6 @@
 import './App.css';
 import {Table} from 'antd';
+import { useState } from 'react';
 
 function App() {
   const columns = [
@@ -25,13 +26,34 @@ function App() {
     }
   ]
 
+  const [dataSource,setDataSource] = useState([
+    {
+      id:1,
+      name:'Marry',
+      email:'marry@gmail.com',
+      address:'Marry address'
+    },
+    {
+      id:2,
+      name:'Tonny',
+      email:'tonny@gmail.com',
+      address:'Tonny address'
+    },
+    {
+      id:3,
+      name:'David',
+      email:'david@gmail.com',
+      address:'David address'
+    }
+  ])
+
   
   return (
     <div className="App">
       <header>
         <Table
           columns={columns}
-          dataSource={}
+          dataSource={dataSource}
         >
 
         </Table>
